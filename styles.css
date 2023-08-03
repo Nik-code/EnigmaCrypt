@@ -1,0 +1,161 @@
+h2 {
+    font-size: 1.5em;
+    font-family: "Garamond", Times, serif;
+    color: #000000;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #e6e2d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.enigma-machine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c5c1ab;
+  border: 1px solid #888;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.keyboard button {
+  background-color: #8b8d7a;
+  color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.keyboard button, .lamp {
+  background-color: #8b8d7a;
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.keyboard button:hover {
+  background-color: #7b7d6a;
+}
+
+.rotor-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.rotor {
+  width: 30px;
+  height: 200px;
+  background-color: #8b8d7a;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rotor-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.plugboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #8b8d7a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.plug {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.socket {
+  width: 30px;
+  height: 30px;
+  background-color: #c5c1ab;
+  border: 2px solid #444;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.wire {
+  width: 2px;
+  height: 50px;
+  background-color: #444;
+}
+
+.wire.disconnected {
+  background-color: #f00;
+}
+
+.wire.connected {
+  background-color: #0f0;
+}
+
+
+.lampboard {
+  display: flex;
+  margin-bottom: 30px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.lamp {
+  width: 40px;
+  height: 40px;
+  background-color: #8b8d7a;
+  color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}

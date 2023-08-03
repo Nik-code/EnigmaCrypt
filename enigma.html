@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigma Machine Simulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- User input -->
+    <input type="text" id="message" oninput="encodeMessage()">
+    <!-- Display coded message -->
+    <p id="output"></p>
+
+    <!-- Include JavaScript here -->
+    <script src="enigma.js"></script>
+    <script>
+        // Function to encode message
+        function encodeMessage() {
+            // Get the user's input
+            var message = document.getElementById('message').value;
+            // Set initial positions for the rotors
+            var positions = [0, 0, 0];
+            // Call the enigma_machine function
+            var encodedMessage = enigma_machine(message, positions);
+            // Display the encoded message
+            document.getElementById('output').innerHTML = encodedMessage;
+        }
+    </script>
+
+    <div class="enigma-machine">
+    <div class="rotor-container">
+      <div class="rotor">
+        <span>1</span>
+        <div class="rotor-controls">
+          <button>+</button>
+          <button>-</button>
+        </div>
+      </div>
+      <div class="rotor">
+        <span>2</span>
+        <div class="rotor-controls">
+          <button>+</button>
+          <button>-</button>
+        </div>
+      </div>
+      <div class="rotor">
+        <span>3</span>
+        <div class="rotor-controls">
+          <button>+</button>
+          <button>-</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lampboard">
+      <div class="row">
+        <div class="lamp">Q</div>
+        <div class="lamp">W</div>
+        <div class="lamp">E</div>
+        <div class="lamp">R</div>
+        <div class="lamp">T</div>
+        <div class="lamp">Z</div>
+        <div class="lamp">U</div>
+        <div class="lamp">I</div>
+        <div class="lamp">O</div>
+      </div>
+      <div class="row">
+        <div class="lamp">A</div>
+        <div class="lamp">S</div>
+        <div class="lamp">D</div>
+        <div class="lamp">F</div>
+        <div class="lamp">G</div>
+        <div class="lamp">H</div>
+        <div class="lamp">J</div>
+        <div class="lamp">K</div>
+      </div>
+      <div class="row">
+        <div class="lamp">P</div>
+        <div class="lamp">Y</div>
+        <div class="lamp">X</div>
+        <div class="lamp">C</div>
+        <div class="lamp">V</div>
+        <div class="lamp">B</div>
+        <div class="lamp">N</div>
+        <div class="lamp">M</div>
+        <div class="lamp">L</div>
+      </div>
+    </div>
+
+<div class="plugboard">
+      <div class="row">
+        <div class="plug">
+            <div class="socket"><span>Q</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>W</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>E</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>R</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>T</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>Z</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>U</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>I</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>O</span></div></div>
+      </div>
+      <div class="row">
+        <div class="plug">
+            <div class="socket"><span>A</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>S</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>D</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>F</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>G</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>H</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>J</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>K</span></div></div>
+      </div>
+      <div class="row">
+        <div class="plug">
+            <div class="socket"><span>P</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>Y</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>X</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>C</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>V</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>B</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>N</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>M</span></div></div>
+        <div class="plug">
+            <div class="socket"><span>L</span></div></div>
+      </div>
+    </div>
+
+
+    <div class="keyboard">
+      <div class="row">
+        <button>Q</button>
+        <button>W</button>
+        <button>E</button>
+        <button>R</button>
+        <button>T</button>
+        <button>Z</button>
+        <button>U</button>
+        <button>I</button>
+        <button>O</button>
+      </div>
+      <div class="row">
+        <button>A</button>
+        <button>S</button>
+        <button>D</button>
+        <button>F</button>
+        <button>G</button>
+        <button>H</button>
+        <button>J</button>
+        <button>K</button>
+      </div>
+      <div class="row">
+        <button>P</button>
+        <button>Y</button>
+        <button>X</button>
+        <button>C</button>
+        <button>V</button>
+        <button>B</button>
+        <button>N</button>
+        <button>M</button>
+        <button>L</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
